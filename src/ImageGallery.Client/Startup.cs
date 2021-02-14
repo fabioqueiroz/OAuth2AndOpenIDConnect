@@ -44,7 +44,7 @@ namespace ImageGallery.Client
                 options.Authority = "https://localhost:44318/";
                 options.ClientId = "imagegalleryclient";
                 options.ResponseType = "code";
-                options.UsePkce = false;
+                //options.UsePkce = false;
                 options.Scope.Add("openid");
                 options.Scope.Add("profile");
                 //options.Scope.Add("address");
@@ -62,7 +62,7 @@ namespace ImageGallery.Client
                 //options.ClaimActions.MapUniqueJsonKey("country", "country");
                 options.SaveTokens = true;
                 options.ClientSecret = "secret";
-                //options.GetClaimsFromUserInfoEndpoint = true;
+                options.GetClaimsFromUserInfoEndpoint = true;
                 //options.TokenValidationParameters = new TokenValidationParameters
                 //{
                 //    NameClaimType = JwtClaimTypes.GivenName,
