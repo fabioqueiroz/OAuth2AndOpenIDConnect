@@ -14,7 +14,8 @@ namespace LocalDemo.IDP
             new IdentityResource[]
             { 
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile()
+                new IdentityResources.Profile(),
+                new IdentityResources.Address()
             };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -46,7 +47,7 @@ namespace LocalDemo.IDP
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        //IdentityServerConstants.StandardScopes.Address,
+                        IdentityServerConstants.StandardScopes.Address,
                         //"roles",
                         //"imagegalleryapi",
                         //"country",
