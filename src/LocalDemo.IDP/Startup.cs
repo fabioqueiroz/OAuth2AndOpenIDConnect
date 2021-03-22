@@ -32,7 +32,6 @@ namespace LocalDemo.IDP
                 .AddInMemoryIdentityResources(Config.IdentityResources)
                 .AddInMemoryApiResources(Config.ApiResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
-                //.AddInMemoryApiResources(Config.Apis)
                 .AddInMemoryClients(Config.Clients)
                 .AddTestUsers(TestUsers.Users);
 
