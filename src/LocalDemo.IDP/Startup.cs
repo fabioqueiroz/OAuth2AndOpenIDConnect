@@ -30,7 +30,9 @@ namespace LocalDemo.IDP
                 options.EmitStaticAudienceClaim = true;
             })
                 .AddInMemoryIdentityResources(Config.IdentityResources)
+                .AddInMemoryApiResources(Config.ApiResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
+                //.AddInMemoryApiResources(Config.Apis)
                 .AddInMemoryClients(Config.Clients)
                 .AddTestUsers(TestUsers.Users);
 

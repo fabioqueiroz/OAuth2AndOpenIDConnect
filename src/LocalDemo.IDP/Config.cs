@@ -21,7 +21,31 @@ namespace LocalDemo.IDP
 
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
-            { };
+            {
+                new ApiScope(
+                    "imagegalleryapi",
+                    "Image Gallery API scope")
+            };
+
+        public static IEnumerable<ApiResource> ApiResources =>
+            new ApiResource[] {
+                new ApiResource(
+                    "imagegalleryapi",
+                    "Image Gallery API",
+                    new[] { "role" })
+                    {
+                        Scopes = { "imagegalleryapi"},
+                        //ApiSecrets = { new Secret("apisecret".Sha256())}
+                    }
+                };
+
+        //public static IEnumerable<ApiResource> Apis =>
+        //    new ApiResource[]
+        //    {
+        //        new ApiResource(
+        //            "imagegalleryapi",
+        //            "Image Gallery API")
+        //    };
 
         public static IEnumerable<Client> Clients =>
             new Client[] 
@@ -50,7 +74,7 @@ namespace LocalDemo.IDP
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Address,
                         "roles",
-                        //"imagegalleryapi",
+                        "imagegalleryapi",
                         //"country",
                         //"subscriptionlevel"
                     },
