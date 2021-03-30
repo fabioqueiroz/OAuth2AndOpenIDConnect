@@ -16,7 +16,9 @@ namespace LocalDemo.IDP
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
                 new IdentityResources.Address(),
-                new IdentityResource("roles", "Your role(s)", new List<string>() { "role" })
+                new IdentityResource("roles", "Your role(s)", new List<string>() { "role" }),
+                new IdentityResource("country", "The country you're living in", new List<string>() { "country" }),
+                new IdentityResource("subscriptionlevel", "Your subscription level", new List<string>() { "subscriptionlevel" })
             };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -67,8 +69,8 @@ namespace LocalDemo.IDP
                         IdentityServerConstants.StandardScopes.Address,
                         "roles",
                         "imagegalleryapi",
-                        //"country",
-                        //"subscriptionlevel"
+                        "country",
+                        "subscriptionlevel"
                     },
                     ClientSecrets =
                     {
