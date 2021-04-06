@@ -36,8 +36,8 @@ namespace LocalDemo.IDP
                     "Image Gallery API",
                     new[] { "role" })
                     {
-                        Scopes = { "imagegalleryapi"},
-                        //ApiSecrets = { new Secret("apisecret".Sha256())}
+                        Scopes = {"imagegalleryapi"},
+                        ApiSecrets = {new Secret("apisecret".Sha256())}
                     }
                 };
 
@@ -46,7 +46,7 @@ namespace LocalDemo.IDP
             { 
                 new Client
                 {
-                    //AccessTokenType = AccessTokenType.Reference,
+                    AccessTokenType = AccessTokenType.Reference,
                     AccessTokenLifetime = 120,
                     AllowOfflineAccess = true,
                     UpdateAccessTokenClaimsOnRefresh = true,
