@@ -47,9 +47,9 @@ namespace LocalDemo.IDP
                 new Client
                 {
                     //AccessTokenType = AccessTokenType.Reference,
-                    //AccessTokenLifetime = 120,
-                    //AllowOfflineAccess = true,
-                    //UpdateAccessTokenClaimsOnRefresh = true,
+                    AccessTokenLifetime = 120,
+                    AllowOfflineAccess = true,
+                    UpdateAccessTokenClaimsOnRefresh = true,
                     ClientName = "Image Gallery",
                     ClientId = "imagegalleryclient",
                     AllowedGrantTypes = GrantTypes.Code,
